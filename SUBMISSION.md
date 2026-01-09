@@ -1,4 +1,3 @@
-```markdown
 # Submission Details
 
 ## Test Account Credentials
