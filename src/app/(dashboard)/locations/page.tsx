@@ -13,7 +13,7 @@ import { useEffect, useRef, useState } from 'react';
 export default function LocationsPage() {
   const [selectedLocation, setSelectedLocation] = useState<Location | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
-  const scrollRef = useRef(null)
+  const scrollRef = useRef<HTMLDivElement | null>(null)
 
   const { data: locations, isLoading, error, refetch } = useQuery({
     queryKey: ['locations'],
