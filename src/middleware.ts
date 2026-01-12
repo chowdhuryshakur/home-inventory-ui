@@ -1,10 +1,13 @@
 import { NextRequest, NextResponse } from "next/server"
+import { cookies } from 'next/headers';
 
 const protectedRoutes = ['/inventory', '/items', 'locations']
 const authRoutes = ['/login']
 
-export const middleware = (request: NextRequest) => {
-    if (request.nextUrl.pathname === '/login') console.log('req', request.cookies.get('auth_token')?.value, request.headers)
+export const middleware = async (request: NextRequest) => {
+    //for testing purpose
+    // (await cookies()).set('auth_token', 'OHUTOOWYIXT3JYAHDSXNPVMP44', { httpOnly: true, path: '/' })
+    
     const { pathname } = request.nextUrl
     const token = request.cookies.get('auth_token')?.value
 
@@ -23,7 +26,3 @@ export const middleware = (request: NextRequest) => {
 
     return NextResponse.next()
 }
-
-export const config = {
-    matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
-};

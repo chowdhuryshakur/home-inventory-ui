@@ -99,10 +99,6 @@
 7. Add comprehensive test suite
 8. Implement image upload for items
 
-## Video Demo
-
-[Unlisted YouTube video link will be added here]
-
 ---
 
 **Built with ❤️ using Next.js 16, TypeScript, and Tailwind CSS**

@@ -30,8 +30,8 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex">
-      <div className="h-dvh w-[50%] px-26.25 py-46 bg-linear-to-br from-[#EFF6FF] to-[#E0E7FF] flex justify-end">
+    <div className="flex flex-col lg:flex-row">
+      <div className="lg:h-dvh lg:w-[50%] px-26.25 py-46 bg-linear-to-br from-[#EFF6FF] to-[#E0E7FF] hidden lg:flex justify-end">
         <div className='flex flex-col gap-10'>
             <Image src='/images/login_page_graphic.jpg' alt='login' width={512} height={500}/>
             <div className="text-center gap-3">
@@ -42,8 +42,8 @@ export default function LoginPage() {
             </div>
         </div>
       </div>
-      <div className="h-dvh w-[50%] px-[136] py-44.5 flex justify-start">
-        <div className='flex flex-col gap-8 w-md'>
+      <div className="min-h-screen lg:h-dvh w-full lg:w-[50%] px-4 lg:px-[136] py-8 lg:py-44.5 flex justify-start">
+        <div className='flex flex-col gap-8 w-full max-w-md'>
             <div className="flex flex-col items-center">
                 <Image src='/images/logo.png' alt='logo' width={60} height={60}/>
                 <h1 className="text-[24px] font-semibold text-[#0F172A]">
@@ -118,7 +118,7 @@ export default function LoginPage() {
                     <Button
                         type="submit"
                         disabled={isLoading}
-                        className="w-full h-12 py-3 px-4 text-base text-white font-medium rounded-lg bg-[#3B82F6]"
+                        className="w-full h-12 py-3 px-4 text-sm sm:text-base text-white font-medium rounded-lg bg-[#3B82F6]"
                         >
                         {isLoading ? 'Signing in...' : 'Sign in'}
                         <ArrowRight className="w-5 h-5 mr-2" />
@@ -138,12 +138,12 @@ export default function LoginPage() {
             </div>
             <div className='flex flex-col items-center'>
                 <p className='text-[#64748B] text-[12px] mb-2'>Version 1.2.4</p>
-                <div className='flex items-center'>
-                    <p className='text-[#64748B] text-[12px] mr-3'>Help Center</p>
-                    <p className='text-[#64748B] text-[12px] mr-3'>•</p>
-                    <p className='text-[#64748B] text-[12px] mr-3'>Privacy Policy</p>
-                    <p className='text-[#64748B] text-[12px] mr-3'>•</p>
-                    <p className='text-[#64748B] text-[12px] mr-3'>Terms of Service</p>
+                <div className='flex items-center gap-3'>
+                    <p className='text-[#64748B] text-[12px]'>Help Center</p>
+                    <p className='text-[#64748B] text-[12px]'>•</p>
+                    <p className='text-[#64748B] text-[12px]'>Privacy Policy</p>
+                    <p className='text-[#64748B] text-[12px]'>•</p>
+                    <p className='text-[#64748B] text-[12px]'>Terms of Service</p>
                 </div>
             </div>
         </div>
