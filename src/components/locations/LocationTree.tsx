@@ -89,7 +89,7 @@ function LocationNode({
       </div>
       {hasChildren && isExpanded && (
         <div>
-          {location.children!.map((child) => (
+          {location.children!.map((child:Location) => (
             <LocationNode
               key={child?.id}
               location={child}
